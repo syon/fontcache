@@ -10,6 +10,7 @@ const tmpCacheDir = "/tmp/cache/fontconfig";
 module.exports.main = (event, context, callback) => {
   process.env.HOME = process.env.LAMBDA_TASK_ROOT;
   shell.mkdir("-p", tmpCacheDir);
+  shell.exec("fc-list");
   shell.exec(`fc-cache -v ${process.env.HOME}/.fonts`);
   const promises = [];
   shell.ls(tmpCacheDir).forEach((Key, i) => {
