@@ -9,7 +9,9 @@ provider:
     - Effect: "Allow"
       Action: "s3:PutObject"
       Resource: "arn:aws:s3:::syon-fontcache/*"
+  environment:
+    DEBUG: "*"
 
 functions:
-  hello:
-    handler: handler.hello
+  main:
+    handler: handler.main
