@@ -1,7 +1,7 @@
 {
   "name": "fontcache",
   "version": "1.0.0",
-  "description": "fontcache",
+  "description": "AWS Lambda :: fc-cache -> S3",
   "main": "handler.js",
   "scripts": {},
   "dependencies": {
